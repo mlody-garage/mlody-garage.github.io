@@ -1,0 +1,270 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background-color: #000;
+  scroll-behavior: smooth;
+}
+
+.scroll-down i {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px; /* Zwiększony rozmiar strzałki */
+  color: #fff!important; /* Czarna strzałka */
+  text-decoration: none;
+  transition: opacity 0.3s;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dodano efekt cienia */
+}
+
+.scroll-down:hover {
+  opacity: 0.8;
+}
+
+.scroll-down i {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Header Styles */
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: top 0.3s, background-color 0.3s;
+}
+
+header.scrolled {
+  top: -256px;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.slogan {
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+}
+
+/* Navigation Styles */
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo {
+  max-width: 250px;
+}
+
+nav .logo img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav .nav-links li {
+  display: inline;
+}
+
+nav .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav .nav-links a:hover {
+  color: #f0a500;
+  transform: scale(1.1);
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Parallax Styles */
+
+.parallax {
+  background-image: url('images/parallax.jpg');
+  height: 90vh; /* Ustawienie wysokości na 100vh, aby parallax zajmował całą wysokość ekranu */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #000;
+  padding-top: 20vh; /* Ustawienie paddingu na 20vh, aby tekst był bardziej widoczny */
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke: 2px #fff;
+  background-color: rgba(255, 255, 0, 0.5);
+}
+.parallax::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+
+/* Main Styles */
+
+main {
+  padding: 100px 20px 20px;
+  text-align: center;
+  background: #111;
+  padding-top: 356px;
+}
+
+section {
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+section ul {
+  padding: 10px 0; /* Dodajemy odstęp między punktami listy */
+}
+
+section ul li {
+  margin-bottom: 10px; /* Dodajemy odstęp między każdą usługą */
+}
+
+
+/* Banner Styles */
+
+.banner {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.banner img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.banner img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #111;
+}
+
+footer audio {
+  width: 100%;
+  max-width: 300px;
+}
+
+#contact ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* Portfolio Image Styles */
+
+.portfolio-image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-image img {
+  width: 30%;
+  height: 256px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.portfolio-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 5px 10px;
+  }
+
+  nav .logo {
+    max-width: 150px;
+  }
+
+  nav .nav-links {
+    gap: 10px;
+  }
+
+  nav .nav-links a {
+    font-size: 14px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    position: absolute;
+	right: 20px;
+    left: auto;
