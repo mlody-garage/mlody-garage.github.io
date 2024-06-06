@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - Młody Garage</title>
+    <title>Kontakt z Młody Garage - Skontaktuj się z nami już dziś</title>
+    <meta name="description" content="Skontaktuj się z Młodym Garage poprzez email, telefon lub odwiedź nas osobiście. Zapraszamy do korzystania z naszych usług serwisowych w Drożejowicach.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon.png">
+    <!-- Dodanie stylu dla Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
 </head>
 <body>
@@ -25,10 +27,10 @@
     </header>
     <main>
         <section id="contact">
-            <h2>Kontakt</h2>
+            <h2>Kontakt z Młody Garage</h2>
             <ul>
-                <li>Email: gr.bedkowski@gmail.com</li>
-                <li>Telefon: +48 666-587-488</li>
+                <li>Email: <a href="mailto:gr.bedkowski@gmail.com">gr.bedkowski@gmail.com</a></li>
+                <li>Telefon: <a href="tel:+48666587488">+48 666-587-488</a></li>
                 <li>Adres: Drożejowice 110/5, Skalbmierz 28-530</li>
             </ul>
             <div id="map"></div> <!-- Miejsce na mapę -->
@@ -37,6 +39,7 @@
     <footer>
         <p>&copy; 2024 Młody Garage. Wszelkie prawa zastrzeżone.</p>
     </footer>
+    <!-- Dodanie skryptów JavaScript -->
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="script.js"></script>
 </body>

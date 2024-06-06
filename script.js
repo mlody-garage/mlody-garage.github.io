@@ -15,7 +15,30 @@ document.addEventListener('DOMContentLoaded', function() {
         initMap();
     }
 
-    scrollToHome();
+    // scrollToHome(); // Opcjonalnie, jeśli chcesz zachować tę funkcjonalność
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Obsługa dotknięcia na urządzeniach mobilnych
+        menuToggle.addEventListener('touchstart', () => {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 128) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 });
 
 function initMap() {
@@ -25,34 +48,9 @@ function initMap() {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([50.344967549322014, 20.403671418800883]).addTo(map)
+    L.marker([50.344967549322014, 20.403671418800883], {
+        alt: "Młody Garage - Drożejowice 110/5, Skalbmierz 28-530"
+    }).addTo(map)
        .bindPopup('Młody Garage<br>Drożejowice 110/5, Skalbmierz 28-530')
        .openPopup();
 }
-
-function scrollToHome() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-}
-
-const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-}
-
-window.onload = function() {
-    const header = document.querySelector('header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 128) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-};
