@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initMap() {
-    const map = L.map('map').setView([50.344967549322014, 20.403671418800883], 15);
+    const map = L.map('map').setView([50.34484076841697, 20.403919425863336], 15);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([50.344967549322014, 20.403671418800883], {
+    L.marker([50.34484076841697, 20.403919425863336], {
         alt: "Młody Garage - Drożejowice 110/5, Skalbmierz 28-530"
     }).addTo(map)
        .bindPopup('Młody Garage<br>Drożejowice 110/5, Skalbmierz 28-530')
