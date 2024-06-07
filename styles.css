@@ -19,11 +19,11 @@ body {
   left: 50%;
   right: 50%;
   transform: translate(-50%, -50%);
-  font-size: 48px; /* Zwiększony rozmiar strzałki */
-  color: #fff!important; /* Czarna strzałka */
+  font-size: 48px;
+  color: #fff!important;
   text-decoration: none;
   transition: opacity 0.3s;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Dodano efekt cienia */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .scroll-down:hover {
@@ -120,7 +120,7 @@ nav .nav-links a:hover {
 
 .parallax {
   background-image: url('images/parallax.jpg');
-  height: 90vh; /* Ustawienie wysokości na 100vh, aby parallax zajmował całą wysokość ekranu */
+  height: 90vh; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -133,7 +133,7 @@ nav .nav-links a:hover {
   font-size: 40px;
   font-weight: bold;
   color: #000;
-  padding-top: 20vh; /* Ustawienie paddingu na 20vh, aby tekst był bardziej widoczny */
+  padding-top: 20vh; 
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
   -webkit-text-stroke: 2px #fff;
   background-color: rgba(255, 255, 0, 0.5);
@@ -159,17 +159,21 @@ main {
   padding-top: 356px;
 }
 
+#contact {
+  margin-top: -20px; /* przesunięcie sekcji kontaktu w górę */
+}
+
 section {
   margin-bottom: 40px;
   animation: fadeIn 1s ease-in-out;
 }
 
 section ul {
-  padding: 10px 0; /* Dodajemy odstęp między punktami listy */
+  padding: 10px 0; 
 }
 
 section ul li {
-  margin-bottom: 10px; /* Dodajemy odstęp między każdą usługą */
+  margin-bottom: 10px;
 }
 
 
@@ -181,7 +185,7 @@ section ul li {
 }
 
 .banner img {
-  max-width: 100%;
+  max-width: 95%;
   height: auto;
   transition: transform 0.3s;
 }
@@ -244,7 +248,7 @@ footer audio {
   }
 
   nav .logo {
-    max-width: 150px;
+    max-width: 120px; /* Zmniejsz szerokość loga na mniejszych ekranach */
   }
 
   nav .nav-links {
@@ -266,5 +270,23 @@ footer audio {
     background: rgba(0, 0, 0, 0.9);
     padding: 10px;
     position: absolute;
-	right: 20px;
+    right: 5px;
+    top: 5px; /* Dodatkowy margines od góry */
     left: auto;
+  }
+  
+  .parallax {
+    height: 70vh; /* Zmniejsz wysokość parallax na mniejszych ekranach */
+    padding-top: 120px; /* Zmniejsz padding górny */
+	font-size: 20px;
+  }
+
+  .scroll-down {
+    top: 75%; /* Przesuń strzałkę w dół na mniejszych ekranach */
+    font-size: 36px; /* Zmniejsz rozmiar strzałki */
+  }
+
+  main {
+    padding-top: 200px; /* Zmniejsz padding górny w sekcji głównej */
+  }
+}
